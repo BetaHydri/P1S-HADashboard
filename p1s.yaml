@@ -1,0 +1,848 @@
+type: sections
+max_columns: 3
+subview: false
+path: 3d-printer
+icon: mdi:printer-3d
+title: 3D- Printer
+sections:
+  - type: grid
+    cards:
+      - type: heading
+        heading: 3D Drucker
+        heading_style: title
+        icon: mdi:printer-3d
+      - type: picture-elements
+        elements:
+          - type: conditional
+            conditions:
+              - condition: state
+                state_not: unavailable
+                entity: sensor.p1s_ams_1_index_der_luftfeuchtigkeit
+              - condition: state
+                state_not: unknown
+                entity: sensor.p1s_ams_1_index_der_luftfeuchtigkeit
+            elements:
+              - type: state-label
+                entity: sensor.p1s_ams_1_index_der_luftfeuchtigkeit
+                tap_action:
+                  action: none
+                style:
+                  top: 77%
+                  left: 9.6%
+                  text-align: center
+                  font-size: 0.8em
+                  background-color: rgba(0,0,0,0)
+                  box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0)
+                  border-radius: 10px
+                  pointer-events: none
+                  color: "#FFFFFF"
+          - type: custom:config-template-card
+            entities:
+              - sensor.p1s_ams_1_slot_1
+            element:
+              type: state-icon
+              entity: sensor.p1s_ams_1_slot_1
+              icon: >-
+                ${states['sensor.p1s_ams_1_slot_1'].state.toLowerCase() !=
+                'empty' ? 'fapro:filament-1' : 'mdi:tray' }
+            style:
+              top: 28%
+              left: 21.4%
+              "--paper-item-icon-color": var(--slot_1_color)
+              background-color: rgba(0,0,0,0.5)
+              box-shadow: 0 0 5px 5px var(--slot_1_bg)
+              border-radius: 50px
+              "--mdc-icon-size": 2.4em
+          - type: state-label
+            entity: sensor.p1s_ams_1_slot_1
+            attribute: type
+            tap_action:
+              action: none
+            style:
+              top: 77%
+              left: 21%
+              text-align: center
+              font-size: 1em
+              background-color: rgba(0,0,0,0.4)
+              box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4)
+              border-radius: 50px
+              pointer-events: none
+              color: "#FFFFFF"
+          - type: custom:config-template-card
+            entities:
+              - sensor.p1s_ams_1_slot_2
+            element:
+              type: state-icon
+              entity: sensor.p1s_ams_1_slot_2
+              icon: >-
+                ${states['sensor.p1s_ams_1_slot_2'].state.toLowerCase() !=
+                'empty' ? 'fapro:filament-1' : 'mdi:tray' }
+            style:
+              top: 28%
+              left: 39.7%
+              "--paper-item-icon-color": var(--slot_2_color)
+              background-color: rgba(0,0,0,0.5)
+              box-shadow: 0 0 5px 5px var(--slot_2_bg)
+              border-radius: 50px
+              "--mdc-icon-size": 2.4em
+          - type: state-label
+            entity: sensor.p1s_ams_1_slot_2
+            attribute: type
+            tap_action:
+              action: none
+            style:
+              top: 77%
+              left: 40%
+              text-align: center
+              font-size: 1em
+              background-color: rgba(0,0,0,0.4)
+              box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4)
+              border-radius: 50px
+              pointer-events: none
+              color: "#FFFFFF"
+          - type: custom:config-template-card
+            entities:
+              - sensor.p1s_ams_1_slot_3
+            element:
+              type: state-icon
+              entity: sensor.p1s_ams_1_slot_3
+              icon: >-
+                ${states['sensor.p1s_ams_1_slot_3'].state.toLowerCase() !=
+                'empty' ? 'fapro:filament-1' : 'mdi:tray' }
+            style:
+              top: 28%
+              left: 59.7%
+              "--paper-item-icon-color": var(--slot_3_color)
+              background-color: rgba(0,0,0,0.5)
+              box-shadow: 0 0 5px 5px var(--slot_3_bg)
+              border-radius: 50px
+              "--mdc-icon-size": 2.4em
+          - type: state-label
+            entity: sensor.p1s_ams_1_slot_3
+            attribute: type
+            tap_action:
+              action: none
+            style:
+              top: 77%
+              left: 60%
+              text-align: center
+              font-size: 1em
+              background-color: rgba(0,0,0,0.4)
+              box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4)
+              border-radius: 50px
+              pointer-events: none
+              color: "#FFFFFF"
+          - type: custom:config-template-card
+            entities:
+              - sensor.p1s_ams_1_slot_4
+            element:
+              type: state-icon
+              entity: sensor.p1s_ams_1_slot_4
+              icon: >-
+                ${states['sensor.p1s_ams_1_slot_4'].state.toLowerCase() !=
+                'empty' ? 'fapro:filament-1' : 'mdi:tray' }
+            style:
+              top: 28%
+              left: 79.6%
+              "--paper-item-icon-color": var(--slot_4_color)
+              background-color: rgba(0,0,0,0.5)
+              box-shadow: 0 0 5px 5px var(--slot_4_bg)
+              border-radius: 50px
+              "--mdc-icon-size": 2.4em
+          - type: state-label
+            entity: sensor.p1s_ams_1_slot_4
+            attribute: type
+            tap_action:
+              action: none
+            style:
+              top: 77%
+              left: 79.6%
+              text-align: center
+              font-size: 1em
+              background-color: rgba(0,0,0,0.4)
+              box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4)
+              border-radius: 50px
+              pointer-events: none
+              color: "#FFFFFF"
+          - type: conditional
+            conditions:
+              - entity: sensor.p1s_druckstatus
+                state_not: offline
+            elements:
+              - type: conditional
+                conditions:
+                  - entity: sensor.p1s_ams_1_ams_temperature
+                    state_not:
+                      - unavailable
+                      - unknown
+                elements:
+                  - entity: sensor.p1s_ams_1_ams_temperature
+                    type: state-badge
+                    style:
+                      top: 50.75%
+                      left: 8%
+                      font-size: 0.75em
+                      color: rgba(0,0,0,0)
+              - type: custom:config-template-card
+                entities:
+                  - sensor.p1s_ams_1_index_der_luftfeuchtigkeit
+                element:
+                  type: state-icon
+                  entity: sensor.p1s_ams_1_index_der_luftfeuchtigkeit
+                  icon: >-
+                    ${'fapro:humidity-level-dark-' +
+                    states['sensor.p1s_ams_1_humidity_index'].state +
+                    '#fullcolor'}
+                style:
+                  top: 38.5%
+                  left: 92.5%
+                  background-color: "#1c1c1c"
+                  border-radius: 50px
+                  border: 0.12em solid var(--humidity-border-color)
+                  "--mdc-icon-size": 2.05em
+        image: /local/media/bambuprinter/AMS_2.png
+        card_mod:
+          style: |
+            ha-card {
+              background: none !important;
+              border: none !important;
+              box-shadow: none !important;
+              --humidity-border-color: {% if states('sensor.p1s_ams_1_index_der_luftfeuchtigkeit')  != 'unavailable' and states('sensor.p1s_ams_1_index_der_luftfeuchtigkeit') | int > 3 %} rgba(255, 255, 126, 0.5); {% elif states('sensor.p1s_ams_1_index_der_luftfeuchtigkeit')  != 'unavailable' and states('sensor.p1s_ams_1_index_der_luftfeuchtigkeit') | int > 1 %} rgba(228,127,97,1.0); {% else %} rgba(194,74,72,1.0); {% endif %}
+              --slot_1_color: {% if is_state_attr('sensor.p1s_ams_1_slot_1', 'color', '#00000000') %} rgb(255, 255, 255); {% else %} {{state_attr('sensor.p1s_ams_1_slot_1', 'color') }}; {% endif %}
+              --slot_2_color: {% if is_state_attr('sensor.p1s_ams_1_slot_2', 'color', '#00000000') %} rgb(255, 255, 255); {% else %} {{state_attr('sensor.p1s_ams_1_slot_2', 'color') }}; {% endif %}
+              --slot_3_color: {% if is_state_attr('sensor.p1s_ams_1_slot_3', 'color', '#00000000') %} rgb(255, 255, 255); {% else %} {{state_attr('sensor.p1s_ams_1_slot_3', 'color') }}; {% endif %}
+              --slot_4_color: {% if is_state_attr('sensor.p1s_ams_1_slot_4', 'color', '#00000000') %} rgb(255, 255, 255); {% else %} {{state_attr('sensor.p1s_ams_1_slot_4', 'color') }}; {% endif %}
+              --slot_1_bg: {% if is_state_attr('sensor.p1s_ams_1_slot_1', 'active', true) %} rgba(255, 255, 126, 0.5); {% else %} rgba(0,0,0,0.5); {% endif %}
+              --slot_2_bg: {% if is_state_attr('sensor.p1s_ams_1_slot_2', 'active', true) %} rgba(255, 255, 126, 0.5); {% else %} rgba(0,0,0,0.5); {% endif %}
+              --slot_3_bg: {% if is_state_attr('sensor.p1s_ams_1_slot_3', 'active', true) %} rgba(255, 255, 126, 0.5); {% else %} rgba(0,0,0,0.5); {% endif %}
+              --slot_4_bg: {% if is_state_attr('sensor.p1s_ams_1_slot_4', 'active', true) %} rgba(255, 255, 126, 0.5); {% else %} rgba(0,0,0,0.5); {% endif %}
+            }
+      - type: picture-elements
+        elements:
+          - type: conditional
+            conditions:
+              - entity: sensor.p1s_druckstatus
+                state_not: offline
+            elements:
+              - type: custom:config-template-card
+                entities:
+                  - sensor.p1s_wi_fi_signalqualitat
+                element:
+                  type: state-icon
+                  entity: sensor.p1s_wi_fi_signalqualitat
+                  icon: >-
+                    ${states['sensor.p1s_wi_fi_signalqualitat'].state > -50 ?
+                    'mdi:wifi-strength-4' :
+                      states['sensor.p1s_wi_fi_signalqualitat'].state > -60 ?
+                    'mdi:wifi-strength-3' :
+                      states['sensor.p1s_wi_fi_signalqualitat'].state > -67 ?
+                    'mdi:wifi-strength-2' :
+                      states['sensor.p1s_wi_fi_signalqualitat'].state > -70 ?
+                    'mdi:wifi-strength-1-alert' : 'mdi:wifi-strength-outline'}
+                style:
+                  left: 67%
+                  top: 13.2%
+                  font-size: 0.8em
+                  color: rgba(0,0,0,0)
+                  "--paper-item-icon-color": >-
+                    ${states['sensor.p1s_wi_fi_signalqualitat'].state > -50 ?
+                    'green' :
+                      states['sensor.p1s_wi_fi_signalqualitat'].state > -60 ?
+                    'yellow' :
+                      states['sensor.p1s_wi_fi_signalqualitat'].state > -67 ?
+                    'orange' :
+                      states['sensor.p1s_wi_fi_signalqualitat'].state > -70 ?
+                    'red' : 'red'}
+              - entity: light.p1s_druckraumbeleuchtung
+                type: state-icon
+                style:
+                  top: 46%
+                  left: 18%
+                  "--mdc-icon-size": 2.6em
+                tap_action:
+                  action: toggle
+              - entity: sensor.p1s_druckstatus
+                type: state-label
+                style:
+                  top: 6.5%
+                  left: 23.69%
+                  font-size: 1em
+                  color: "#FFFFFF"
+              - type: conditional
+                conditions:
+                  - entity: sensor.p1s_druckstatus
+                    state:
+                      - running
+                      - pause
+                elements:
+                  - type: conditional
+                    conditions:
+                      - entity: image.p1s_titelbild
+                        state_not: unavailable
+                    elements:
+                      - type: custom:hui-element
+                        card_type: picture-entity
+                        show_name: false
+                        show_state: false
+                        entity: image.p1s_titelbild
+                        style:
+                          top: 50%
+                          left: 50%
+                          transform: translate(-45%, -40%) scale(75%, 75%)
+                          "--ha-card-border-width": 0px
+                          "--ha-card-background": none
+                  - entity: sensor.p1s_druckfortschritt
+                    type: state-badge
+                    tap_action:
+                      action: none
+                    style:
+                      top: 18.5%
+                      left: 81%
+                      font-size: 1em
+                      color: rgba(0,0,0,0)
+                      "--label-badge-red": "#11739D"
+              - entity: sensor.p1s_temperatur_der_duse
+                type: state-badge
+                style:
+                  top: 31%
+                  left: 51%
+                  font-size: 0.8em
+                  color: rgba(0,0,0,0)
+              - entity: sensor.p1s_druckbetttemperatur
+                type: state-badge
+                style:
+                  top: 78%
+                  left: 51%
+                  font-size: 0.8em
+                  color: rgba(0,0,0,0)
+              - type: conditional
+                conditions:
+                  - entity: sensor.aqrdrucker_temperature
+                    state_not:
+                      - unavailable
+                      - unknown
+                elements:
+                  - entity: sensor.aqrdrucker_temperature
+                    type: state-badge
+                    style:
+                      font-size: 0.8em
+                      top: 31%
+                      left: 19%
+                      color: rgba(0,0,0,0)
+        card_mod:
+          style: |
+            ha-card {
+              box-shadow: none !important;
+              background: none !important;
+              border: none !important;
+            }
+        image: /local/media/bambuprinter/on_p1s.png
+        entity: light.p1s_druckraumbeleuchtung
+        state_image:
+          unavailable: /local/media/bambuprinter/off_p1s.png
+          "on": /local/media/bambuprinter/on_p1s.png
+          "off": /local/media/bambuprinter/off_p1s.png
+      - show_state: true
+        show_name: true
+        camera_view: live
+        type: picture-entity
+        entity: switch.p1s_kamera_aktivieren
+        camera_image: camera.p1s_kamera
+  - type: grid
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: conditional
+            conditions:
+              - condition: state
+                entity: fan.p1s_druckkopflufter
+                state_not: unavailable
+              - condition: state
+                entity: sensor.p1s_druckkopflufter
+                state_not: unknown
+            card:
+              type: custom:mushroom-fan-card
+              entity: fan.p1s_druckkopflufter
+              name: Printhead Fan
+              icon_animation: true
+              show_percentage_control: true
+              fill_container: false
+              layout: horizontal
+          - type: conditional
+            card:
+              type: custom:mushroom-fan-card
+              entity: fan.p1s_druckraumlufter
+              name: Chamber Fan
+              icon_animation: true
+              show_percentage_control: true
+              fill_container: false
+              layout: horizontal
+            conditions:
+              - condition: state
+                entity: fan.p1s_druckraumlufter
+                state_not: unavailable
+              - condition: state
+                entity: sensor.p1s_druckraumlufter
+                state_not: unknown
+          - type: conditional
+            card:
+              type: custom:mushroom-fan-card
+              entity: fan.p1s_bauteillufter
+              name: Part Cooling Fan
+              icon_animation: true
+              show_percentage_control: true
+              fill_container: false
+              layout: horizontal
+            conditions:
+              - condition: state
+                entity: fan.p1s_bauteillufter
+                state_not: unavailable
+              - condition: state
+                entity: sensor.p1s_bauteillufter
+                state_not: unknown
+          - type: conditional
+            card:
+              type: custom:mushroom-number-card
+              entity: number.p1s_zieltemperatur_der_duse
+              name: Set Nozzle Temp
+              layout: horizontal
+              display_mode: buttons
+            conditions:
+              - condition: state
+                entity: number.p1s_zieltemperatur_der_duse
+                state_not: unavailable
+          - type: conditional
+            card:
+              type: custom:mushroom-number-card
+              entity: number.p1s_zieltemperatur_des_druckbett
+              name: Set Bed Temp
+              display_mode: buttons
+              layout: horizontal
+            conditions:
+              - condition: state
+                entity: number.p1s_zieltemperatur_des_druckbett
+                state_not: unavailable
+          - type: conditional
+            card:
+              type: custom:mushroom-number-card
+              entity: number.p1s_chamber_target_temperature
+              name: Set Chamber Temp
+              display_mode: buttons
+              layout: horizontal
+            conditions:
+              - condition: state
+                entity: number.p1s_chamber_target_temperature
+                state_not: unavailable
+    image: /local/media/bambuprinter/spool.png
+    card_mod:
+      style: |
+        ha-card {
+          margin-left: auto;
+          margin-right: auto;
+          width: 60%;
+          height: 60%;
+          background: none !important;
+          border: none !important;
+          box-shadow: none !important;
+          --tray_vt_color: {{state_attr('sensor.p1s_externalspool_externe_spule', 'color') }};
+          --tray_vt_bg: {% if is_state_attr('sensor.p1s_externalspool_externe_spule', 'active', true) %} rgba(255, 255, 126, 0.5); {% else %} rgba(0,0,0,0.5); {% endif %}
+        }
+  - type: grid
+    cards:
+      - type: vertical-stack
+        cards:
+          - type: vertical-stack
+            cards:
+              - type: custom:mushroom-title-card
+                title: ""
+                subtitle: Print Details
+                alignment: center
+              - type: custom:mushroom-entity-card
+                entity: sensor.p1s_name_der_aufgabe
+                name: Task
+                icon: mdi:clipboard-text
+              - type: horizontal-stack
+                cards:
+                  - type: custom:mushroom-entity-card
+                    entity: sensor.p1s_druckfortschritt
+                    name: Progress
+                    icon: mdi:progress-helper
+                  - type: custom:mushroom-template-card
+                    primary: Layer
+                    icon_color: var(--rgb-state-entity)
+                    secondary: >-
+                      {{states('sensor.p1s_aktuelle_schicht')}} /
+                      {{states('sensor.p1s_gesamtzahl_der_schichten')}}
+                    icon: mdi:layers
+          - type: custom:tabbed-card
+            options: {}
+            tabs:
+              - card:
+                  type: vertical-stack
+                  cards:
+                    - type: entities
+                      entities:
+                        - entity: sensor.p1s_aktueller_arbeitsschritt
+                          name: Stage
+                        - entity: binary_sensor.p1s_hms_fehler
+                          name: HMS Status
+                        - entity: sensor.p1s_startzeit
+                          name: Start Time
+                          secondary_info: last-changed
+                        - entity: sensor.p1s_verbleibende_zeit
+                          name: Verbleibende Zeit
+                        - entity: binary_sensor.p1s_firmware_status
+                          name: Firmware
+                        - entity: sensor.p1s_aktiver_slot
+                          name: Aktuelles Filament
+                        - entity: sensor.p1s_drucklange
+                          name: Filament Länge
+                        - entity: sensor.p1s_gewicht_des_drucks
+                          name: Filament Masse
+                attributes:
+                  label: Details
+      - type: vertical-stack
+        cards:
+          - type: custom:button-card
+            entity: switch.steckdoseh
+            name: 3D-Drucker Steuerung
+            icon: mdi:printer-3d
+            show_icon: true
+            show_state: false
+            layout: icon_name
+            tap_action:
+              action: |
+                [[[
+                  if (entity) return 'toggle';
+                  else return 'none';
+                ]]]
+            confirmation:
+              text: Toggle Printer Power?
+            state:
+              - value: "on"
+                icon: mdi:power
+                color: green
+              - value: "off"
+                icon: mdi:power
+                color: grey
+            styles:
+              grid:
+                - grid-template-columns: |
+                    [[[
+                      if (entity) return '20% 1fr 20%';
+                      else return '20% 1fr 20%';
+                    ]]]
+              icon:
+                - width: |
+                    [[[
+                      if (entity) return '65px';
+                      else return '0px';
+                    ]]]
+                - padding-left: 20px
+              name:
+                - text-wrap: balance
+                - font-size: 1.4em
+            card_mod:
+              style: |
+                ha-card {
+                  background: rgba(0,0,0,0);
+                  border: none;
+                  box-shadow: none !important;
+                }
+          - type: custom:gap-card
+            height: 5
+          - type: custom:hui-element
+            card_type: horizontal-stack
+            cards:
+              - type: custom:hui-element
+                card_type: button
+                entity: select.p1s_druckgeschwindigkeit
+                name: Silent
+                icon: mdi:speedometer-slow
+                tap_action:
+                  action: call-service
+                  service: select.select_option
+                  data:
+                    option: silent
+                  target:
+                    entity_id: select.p1s_druckgeschwindigkeit
+                card_mod:
+                  style: |
+                    ha-card {
+                      box-shadow: none !important;
+                      background-color: rgba(0,0,0,0);
+                      border: none;
+                      --pbs-button-color: {% if is_state('select.p1s_druckgeschwindigkeit', 'Silent') or is_state('select.p1s_druckgeschwindigkeit', 'silent') %} yellow; {% else %} grey; {% endif %}
+                      --paper-item-icon-color: {% if is_state('select.p1s_druckgeschwindigkeit', 'Silent') or is_state('select.p1s_druckgeschwindigkeit', 'silent') %} yellow; {% else %} grey; {% endif %}
+                    }
+              - type: custom:hui-element
+                card_type: button
+                entity: select.p1s_druckgeschwindigkeit
+                name: Standard
+                icon: mdi:speedometer-medium
+                tap_action:
+                  action: call-service
+                  service: select.select_option
+                  data:
+                    option: standard
+                  target:
+                    entity_id: select.p1s_druckgeschwindigkeit
+                card_mod:
+                  style: |
+                    ha-card {
+                      box-shadow: none !important;
+                      background-color: rgba(0,0,0,0);
+                      border: none;
+                      --paper-item-icon-color: {% if is_state('select.p1s_druckgeschwindigkeit', 'Standard') or is_state('select.p1s_druckgeschwindigkeit', 'standard') %} yellow; {% else %} grey; {% endif %}
+                    }
+              - type: custom:hui-element
+                card_type: button
+                entity: select.p1s_druckgeschwindigkeit
+                name: Sport
+                icon: mdi:speedometer
+                tap_action:
+                  action: call-service
+                  service: select.select_option
+                  data:
+                    option: sport
+                  target:
+                    entity_id: select.p1s_druckgeschwindigkeit
+                card_mod:
+                  style: |
+                    ha-card {
+                      box-shadow: none !important;
+                      background-color: rgba(0,0,0,0);
+                      border: none;
+                      --paper-item-icon-color: {% if is_state('select.p1s_druckgeschwindigkeit', 'Sport') or is_state('select.p1s_druckgeschwindigkeit', 'sport') %} yellow; {% else %} grey; {% endif %}
+                    }
+              - type: custom:hui-element
+                card_type: button
+                entity: select.p1s_druckgeschwindigkeit
+                name: Ludicrous
+                icon: mdi:speedometer
+                tap_action:
+                  action: call-service
+                  service: select.select_option
+                  data:
+                    option: ludicrous
+                  target:
+                    entity_id: select.p1s_druckgeschwindigkeit
+                card_mod:
+                  style: |
+                    ha-card {
+                      box-shadow: none !important;
+                      background-color: rgba(0,0,0,0);
+                      border: none;
+                      --paper-item-icon-color: {% if is_state('select.p1s_druckgeschwindigkeit', 'Ludicrous') or is_state('select.p1s_druckgeschwindigkeit', 'ludicrous') %} yellow; {% else %} grey; {% endif %}
+                    }
+          - type: custom:gap-card
+            height: 5
+          - type: custom:hui-element
+            card_type: horizontal-stack
+            cards:
+              - type: custom:button-card
+                variables:
+                  pause_entity: button.p1s_druckvorgang_anhalten
+                  start_entity: button.p1s_druckvorgang_fortsetzen
+                entity: sensor.p1s_druckstatus
+                name: >
+                  [[[  if (entity.state.toUpperCase() == 'LÄUFT') return
+                  "Pause"; 
+
+                  else if (entity.state.toUpperCase() == 'PAUSE') return
+                  "Resume"; 
+
+                  else return ''; ]]]
+                state:
+                  - value: RUNNING
+                    icon: mdi:pause
+                    color: orange
+                  - value: running
+                    icon: mdi:pause
+                    color: orange
+                  - value: PAUSE
+                    icon: mdi:play
+                    color: orange
+                  - value: pause
+                    icon: mdi:play
+                    color: orange
+                  - value: OFFLINE
+                    icon: mdi:void
+                    color: grey
+                  - value: offline
+                    icon: mdi:void
+                    color: grey
+                  - value: IDLE
+                    icon: mdi:void
+                    color: grey
+                  - value: idle
+                    icon: mdi:void
+                    color: grey
+                  - value: FAILED
+                    icon: mdi:void
+                    color: grey
+                  - value: failed
+                    icon: mdi:void
+                    color: grey
+                  - value: FINISH
+                    icon: mdi:void
+                    color: grey
+                  - value: finish
+                    icon: mdi:void
+                    color: grey
+                  - value: PREPARE
+                    icon: mdi:void
+                    color: grey
+                  - value: prepare
+                    icon: mdi:void
+                    color: grey
+                tap_action:
+                  action: >
+                    [[[ if (entity.state.toUpperCase() == 'LÄUFT' ||
+                    entity.state.toUpperCase() == 'PAUSE') return
+                    "call-service";   else return "none";   ]]]
+                  service: button.press
+                  service_data:
+                    entity_id: >
+                      [[[ if
+                      (states['sensor.p1s_druckstatus'].state.toUpperCase() ==
+                      'LÄUFT') 
+                            return variables.pause_entity; 
+                            if (states['sensor.p1s_druckstatus'].state.toUpperCase() == 'PAUSE') 
+                            return variables.start_entity; 
+                          else return "";
+                        ]]]
+                card_mod:
+                  style: |
+                    ha-card {
+                      box-shadow: none !important;
+                      background-color: rgba(0,0,0,0);
+                      border: none;
+                      --paper-item-icon-color: {% if is_state('sensor.p1s_druckstatus', 'LÄUFT') or is_state('sensor.p1s_druckstatus', 'PAUSE') or is_state('sensor.p1s_druckstatus', 'läuft') or is_state('sensor.p1s_druckstatus', 'pause') %} orange; {% else %} grey; {% endif %}    
+                    }
+              - type: custom:gap-card
+              - type: custom:button-card
+                entity: sensor.p1s_druckstatus
+                name: >
+                  [[[  if (entity.state.toUpperCase() == 'LÄUFT') return
+                  "Beenden";
+                   else if (entity.state.toUpperCase() =='PAUSE') return "Beenden";
+                   else return '';  ]]]
+                confirmation:
+                  text: Cancel Print?
+                state:
+                  - value: RUNNING
+                    icon: mdi:cancel
+                    color: red
+                  - value: running
+                    icon: mdi:cancel
+                    color: red
+                  - value: PAUSE
+                    icon: mdi:cancel
+                    color: red
+                  - value: pause
+                    icon: mdi:cancel
+                    color: red
+                  - value: OFFLINE
+                    icon: mdi:void
+                    color: grey
+                  - value: offline
+                    icon: mdi:void
+                    color: grey
+                  - value: IDLE
+                    icon: mdi:void
+                    color: grey
+                  - value: idle
+                    icon: mdi:void
+                    color: grey
+                  - value: FAILED
+                    icon: mdi:void
+                    color: grey
+                  - value: failed
+                    icon: mdi:void
+                    color: grey
+                  - value: FINISH
+                    icon: mdi:void
+                    color: grey
+                  - value: finish
+                    icon: mdi:void
+                    color: grey
+                  - value: PREPARE
+                    icon: mdi:void
+                    color: grey
+                  - value: prepare
+                    icon: mdi:void
+                    color: grey
+                tap_action:
+                  action: >
+                    [[[ if (entity.state.toUpperCase() == 'LÄUFT' ||
+                    entity.state.toUpperCase() == 'PAUSE')  return
+                    "call-service";  else return "none";  ]]]
+                  service: button.press
+                  service_data:
+                    entity_id: button.p1s_druckvorgang_beenden
+                card_mod:
+                  style: |
+                    ha-card {
+                      box-shadow: none !important;
+                      background-color: rgba(0,0,0,0);
+                      border: none;
+                      --paper-item-icon-color: {% if is_state('sensor.p1s_druckstatus', 'LÄUFT') or is_state('sensor.p1s_druckstatus', 'PAUSE') or is_state('sensor.p1s_druckstatus', 'läuft') or is_state('sensor.p1s_druckstatus', 'pause') %} red; {% else %} grey; {% endif %}
+                    }
+      - type: heading
+        heading: Externe Spule
+        heading_style: title
+        icon: mdi:blur-radial
+      - type: picture-elements
+        elements:
+          - type: custom:config-template-card
+            entities:
+              - sensor.p1s_externalspool_externe_spule
+            element:
+              type: state-icon
+              entity: sensor.p1s_externalspool_externe_spule
+              icon: >-
+                ${states['sensor.p1s_externalspool_externe_spule'].state.toLowerCase()
+                != 'empty' ? 'fapro:filament-1' : 'mdi:tray' }
+            style:
+              top: 50%
+              left: 50%
+              transform: translate(-50%, -50%) scale(200%)
+              "--paper-item-icon-color": var(--tray_vt_color)
+              background-color: rgba(0,0,0,0.5)
+              box-shadow: 0 0 5px 5px var(--tray_vt_bg)
+              border-radius: 50px
+              "--mdc-icon-size": 1.8em
+          - type: state-label
+            entity: sensor.p1s_externalspool_externe_spule
+            attribute: type
+            tap_action:
+              action: none
+            style:
+              top: 50%
+              left: 85%
+              text-align: center
+              font-size: 1em
+              background-color: rgba(0,0,0,0.4)
+              box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4)
+              border-radius: 50px
+              pointer-events: none
+              color: "#FFFFFF"
+        image: /local/media/bambuprinter/spool.png
+        card_mod:
+          style: |
+            ha-card {
+              margin-left: auto;
+              margin-right: auto;
+              width: 60%;
+              height: 60%;
+              background: none !important;
+              border: none !important;
+              box-shadow: none !important;
+              --tray_vt_color: {{state_attr('sensor.p1s_externalspool_externe_spule', 'color') }};
+              --tray_vt_bg: {% if is_state_attr('sensor.p1s_externalspool_externe_spule', 'active', true) %} rgba(255, 255, 126, 0.5); {% else %} rgba(0,0,0,0.5); {% endif %}
+            }
+        grid_options:
+          columns: 9
+          rows: auto
+cards: []
